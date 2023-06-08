@@ -17,18 +17,7 @@
     let period = document.getElementsByName("period");
 
     window.addEventListener("DOMContentLoaded", () => {
-        // console.log("Loaded js");
-        // console.log(benefitsInput);
-        // console.log(salaryInput);
-        // console.log(monthBox);
-        // console.log(yearBox);
-
-        let salary;
-        let benefits;
-        let deduct_nssf;
-        let deduct_nhif;
-        let monthly = true;
-        let isNewRates;
+      
 
         document.querySelectorAll("input[type=text]").forEach((input, i) => {
             console.log(input);
