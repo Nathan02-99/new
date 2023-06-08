@@ -33,7 +33,7 @@
                     console.log(salary);
                 }
 
-                if (i === 1) {
+                if (i === 0) {
                     benefits = parseInt(input.value);
                     console.log(benefits);
                 }
