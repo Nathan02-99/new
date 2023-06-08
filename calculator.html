@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/calculator.css">
+    <title>PAYE TAX CALCULATOR</title>
+</head>
+
+<body>
+
+    <div class="calculate">
+      <h1>KENYAN PAYE TAX CALCULATOR</h1>
+      <a href="index.html" class="button">Home</a>
+        <form action="">
+            <div class="row">
+                <div class="left">
+                    <h5>Pay period:</h5>
+                </div>
+                <div class="right">
+                    <label for="month"><input type="checkbox" name="period" id="month"> MONTH</label>
+                    <label for="year"><input type="checkbox" name="period" id="year"> YEAR</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="left">
+                    <h5>Basic Salary:</h5>
+                </div>
+                <div class="right">
+                    <input type="text" name="salary" id="salary-input">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="left">
+                    <h5>Benefits (Bonus,Allowance):</h5>
+                </div>
+                <div class="right">
+                    <input type="text" name="salary" id="benefits-input">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="left">
+                    <h5>Deduct NSSF:</h5>
+                </div>
+                <div class="right">
+                    <label for="yes"><input type="checkbox" name="nssf" id="yes-nssf"> YES</label>
+                    <label for="no"><input type="checkbox" name="nssf" id="no-nssf"> NO</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="left">
+                    <h5>NSSF Rates:</h5>
+                </div>
+                <div class="right">
+                    <label for="new"> <input type="checkbox" name="rates" id="new-rates"> NEW NSSF RATES
+                            (RETIRED)</label>
+                    <label for="old"><input type="checkbox" name="rates" id="old-rates"> OLD NSSF RATES
+                            (KSH200)</label>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="left">
+                    <h5>Deduct NHIF:</h5>
+                </div>
+                <div class="right">
+                    <label for="yes"><input type="checkbox" name="nhif" id="yes-nhif"> YES</label>
+                    <label for="no"><input type="checkbox" name="nhif" id="no-nhif"> NO</label>
+                </div>
+            </div>
+
+
+            <input type="button" value="Calculate" class="calc-btn">
+
+        </form>
+    </div>
+
+    <div class="results">
+
+        <form action="">
+            <div class="row">
+                <div class="left">
+                    <h5>INCOME BEFORE PENSION DEDUCTION</h5>
+                </div>
+                <div class="right">
+                    <h6>KSH <span class="val1">00</span></h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="left">
+                    <h5>DEDUCTIBLE NSSF PENSION CONTRIBUTION</h5>
+                </div>
+                <div class="right">
+                    <h6>KSH <span class="val2">00</span></h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="left">
+                    <h5>INCOME AFTER PENSION DEDUCTION</h5>
+                </div>
+                <div class="right">
+                    <h6>KSH <span class="val3">00</span></h6>
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="left">
+                    <h5>BENEFITS IN KIND</h5>
+                </div>
+                <div class="right">
+                    <h6>KSH <span class="val4">00</span></h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="left">
+                    <h5>TAXABLE INCOME</h5>
+                </div>
+                <div class="right">
+                    <h6>KSH <span class="val5">00</span></h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="left">
+                    <h5>TAX ON TAXABLE INCOME</h5>
+                </div>
+                <div class="right">
+                    <h6>KSH <span class="val6">00</span></h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="left">
+                    <h5>PERSONAL RELIEF</h5>
+                </div>
+                <div class="right">
+                    <h6>KSH <span class="val7">00</span></h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="left">
+                    <h5>TAX NET OFF RELIEF</h5>
+                </div>
+                <div class="right">
+                    <h6>KSH <span class="val8">00</span></h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="left">
+                    <h5>PAYE</h5>
+                </div>
+                <div class="right">
+                    <h6>KSH <span class="val9">00</span></h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="left">
+                    <h5>CHARGEABLE INCOME</h5>
+                </div>
+                <div class="right">
+                    <h6>KSH <span class="val10">00</span></h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="left">
+                    <h5>NHIF CONTRIBUTION</h5>
+                </div>
+                <div class="right">
+                    <h6>KSH <span class="val11">00</span></h6>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="left">
+                    <h5>NET PAY</h5>
+                </div>
+                <div class="right">
+                    <h6>KSH <span class="val12">00</span></h6>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

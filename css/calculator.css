@@ -1,0 +1,178 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body,
+.banner {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+}
+
+body h1{
+  text-align: center;
+  margin-top: 5px;
+  color: white;
+}
+
+.button{
+  font-weight: bolder;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 15px;
+  right: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+.calc-btn:focus + .results {
+  scroll-snap-align: start;
+}
+.calculate {
+  scroll-snap-type: y mandatory;
+    color: white;
+    position: relative;
+    border-right: 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #AD00FF, #FF002E);
+    height: 100vh;
+}
+
+.calculate form {
+    margin-top: 20px;
+    position: relative;
+    height: 550px;
+    width: 650px;
+    border-radius: 20px;
+    background: black;
+}
+
+.calculate form .row {
+  margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1.5rem 1.5rem;
+}
+
+.calculate form .row .left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-right: 2rem;
+}
+
+.calculate form .row .left h5 {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+.calculate form .row .right {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.calculate form .row .right input[type="text"] {
+    width: 200px;
+    height: 28px;
+    outline: none;
+    font-size: 1rem;
+    padding-left: 1rem;
+    border-radius: 10px;
+}
+
+.calculate form .row .right label {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+}
+
+.calculate form .row .right label input[type="checkbox"] {
+    padding: 4rem;
+    font-size: 2rem;
+    border: 1px solid red;
+    padding: 2rem;
+}
+
+.calculate form .row .right label input[type="checkbox"]:checked {
+    color: black;
+    background-color: rgb(243, 10, 10);
+}
+
+.calculate form .calc-btn {
+    margin: 0.5rem auto;
+    align-items: center;
+    margin-left: 220px;
+    margin-right: auto;
+    transform: translateX(40%);
+    width: 100px;
+    color: white;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+    background-color: green;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    right: 50%;
+}
+
+.results form .calc-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.results {
+    background: linear-gradient(to right, #AD00FF, #FF002E);
+    margin-top: 0px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.results form {
+    position: relative;
+    width: 60%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.results form .row {
+    color: white;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 1px solid white;
+    padding: 1rem 1rem;
+    border-radius: 10px;
+}
+
+.results form .row .left {
+    padding-right: 2rem;
+}
+
+.results form .row .left h5 {
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.results form .row .right {
+    text-align: center;
+}
+
+.results form .row .right h6 {
+    font-size: 1rem;
+}
+
+.results form .row .right h6 span {
+    padding-left: 1rem;
+}
