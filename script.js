@@ -89,7 +89,7 @@
         const totalIncome = () => {
             let total = 0;
 
-            if (salary !== null && benefits !== null) {
+            if (salary !== null && benefits !== 0) {
                 if (salary >= 0 && benefits >= 0) {
                     total += salary + benefits;
                 }
