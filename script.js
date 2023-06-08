@@ -18,7 +18,13 @@
 
     window.addEventListener("DOMContentLoaded", () => {
       
-
+   let salary;
+        let benefits;
+        let deduct_nssf;
+        let deduct_nhif;
+        let monthly = true;
+        let isNewRates;
+       
         document.querySelectorAll("input[type=text]").forEach((input, i) => {
             console.log(input);
             input.addEventListener("change", () => {
@@ -36,14 +42,12 @@
 
         yesNHIF.addEventListener("change", function() {
             if (this.checked) {
-                deduct_nhif = true;
-            }
+                deduct_nhif = true; }
         });
 
-        noNHIF.addEventListener("change", function() {
+      noNHIF.addEventListener("change", function() {
             if (this.checked) {
-                deduct_nhif = false;
-            }
+                deduct_nhif = false;}
         });
 
         yesNSSF.addEventListener("change", function() {
