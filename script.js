@@ -196,7 +196,7 @@
         };
 
         const getBenefitsInKind = () => {
-            if (benefits !== null && benefits > 0) {
+            if (benefits !== null && benefits => 0) {
                 document.querySelector(".val4").textContent = benefits;
             } else {
                 document.querySelector(".val4").textContent = 0;
