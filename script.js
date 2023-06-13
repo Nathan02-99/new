@@ -17,14 +17,15 @@
     let period = document.getElementsByName("period");
 
     window.addEventListener("DOMContentLoaded", () => {
-      
-   let salary;
+        
+
+        let salary;
         let benefits;
         let deduct_nssf;
         let deduct_nhif;
         let monthly = true;
         let isNewRates;
-       
+
         document.querySelectorAll("input[type=text]").forEach((input, i) => {
             console.log(input);
             input.addEventListener("change", () => {
@@ -33,7 +34,7 @@
                     console.log(salary);
                 }
 
-                if (i === 0) {
+                if (i === 1) {
                     benefits = parseInt(input.value);
                     console.log(benefits);
                 }
@@ -42,12 +43,14 @@
 
         yesNHIF.addEventListener("change", function() {
             if (this.checked) {
-                deduct_nhif = true; }
+                deduct_nhif = true;
+            }
         });
 
-      noNHIF.addEventListener("change", function() {
+        noNHIF.addEventListener("change", function() {
             if (this.checked) {
-                deduct_nhif = false;}
+                deduct_nhif = false;
+            }
         });
 
         yesNSSF.addEventListener("change", function() {
@@ -71,6 +74,7 @@
         oldRates.addEventListener("change", function() {
             if (this.checked) {
                 isNewRates = false;
+                deductNSSF();
             }
         });
 
@@ -89,7 +93,7 @@
         const totalIncome = () => {
             let total = 0;
 
-            if (salary !== null && benefits !== 0) {
+            if (salary !== null && benefits !== null) {
                 if (salary >= 0 && benefits >= 0) {
                     total += salary + benefits;
                 }
@@ -134,7 +138,7 @@
                     nssfAmount += salary * 0.12;
                 }
             } else {
-                s;
+
                 nssfAmount += 200;
             }
 
@@ -196,7 +200,7 @@
         };
 
         const getBenefitsInKind = () => {
-            if (benefits !== null && benefits => 0) {
+            if (benefits !== null && benefits > 0) {
                 document.querySelector(".val4").textContent = benefits;
             } else {
                 document.querySelector(".val4").textContent = 0;
@@ -214,7 +218,7 @@
             let income = totalIncome();
             let amount = 0;
 
-            if ((income <= 12, 298)) {
+            if ((income <= 12298)) {
                 amount += income * 0.1;
             } else if (income >= 12999 && income <= 23885) {
                 amount += income * 0.15;
