@@ -268,11 +268,12 @@
         const getNetPay = () => {
             let paye = getPAYE();
             let nhif = deductNHIF();
+            let benefits = getBenefitsInKind();
             let relief = getPersonalRelief();
             let nssf = deductNSSF();
             let totalAmount = totalIncome();
 
-            let pay = totalAmount - (paye + nhif + relief + nssf);
+            let pay = totalAmount - (paye + nhif + relief + nssf + benefits);
             document.querySelector(".val12").textContent = pay;
             return pay;
         };
