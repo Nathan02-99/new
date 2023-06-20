@@ -17,7 +17,11 @@
     let period = document.getElementsByName("period");
 
     window.addEventListener("DOMContentLoaded", () => {
-        
+        // console.log("Loaded js");
+        // console.log(benefitsInput);
+        // console.log(salaryInput);
+        // console.log(monthBox);
+        // console.log(yearBox);
 
         let salary;
         let benefits;
@@ -268,12 +272,11 @@
         const getNetPay = () => {
             let paye = getPAYE();
             let nhif = deductNHIF();
-            let benefits = getBenefitsInKind();
             let relief = getPersonalRelief();
             let nssf = deductNSSF();
             let totalAmount = totalIncome();
 
-            let pay = totalAmount - (paye + nhif + relief + nssf + benefits);
+            let pay = totalAmount - (paye + nhif + relief + nssf);
             document.querySelector(".val12").textContent = pay;
             return pay;
         };
@@ -308,3 +311,4 @@
   });
     });
 })();
+
