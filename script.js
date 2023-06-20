@@ -219,7 +219,7 @@
         };
 
         const getTaxOnTaxableIncome = () => {
-            let income = totalIncome();
+            let income = getTaxableIncome();
             let amount = 0;
 
             if ((income <= 12298)) {
