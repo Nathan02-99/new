@@ -31,13 +31,13 @@ body h1{
 .calc-btn:focus + .results {
   scroll-snap-align: start;
 }
-.calculate {
+.page {
   scroll-snap-type: y mandatory;
     color: white;
     position: relative;
     border-right: 1px solid;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     background: linear-gradient(to right, #AD00FF, #FF002E);
@@ -45,6 +45,7 @@ body h1{
 }
 
 .calculate form {
+  margin-left: 40px;
     margin-top: 20px;
     position: relative;
     height: 550px;
@@ -128,20 +129,14 @@ body h1{
     color: black;
 }
 
-.results {
-    background: linear-gradient(to right, #AD00FF, #FF002E);
-    margin-top: 0px;
-    height: 100%;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-}
+
 
 .results form {
+  margin-top: 50px;
+    margin-left: 90px;
     position: relative;
-    width: 60%;
+    width: 70%;
+    height: 83vh;
     background-color: black;
     border-radius: 10px;
 }
@@ -152,7 +147,7 @@ body h1{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     border: 1px solid white;
-    padding: 1rem 1rem;
+    padding: 0.33rem 1rem;
     border-radius: 10px;
 }
 
