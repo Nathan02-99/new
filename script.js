@@ -193,7 +193,7 @@
         };
 
         const getIncomeAfterPension = () => {
-            let newIncome = totalIncome() - (deductNSSF()+ deductNHIF());
+            let newIncome = totalIncome() - deductNSSF();
 
             document.querySelector(".val3").textContent = newIncome;
             return newIncome;
